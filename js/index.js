@@ -1,5 +1,5 @@
 var select = document.querySelector('.select');
-var list = document.querySelector('.list');
+var list = document.querySelector('.pokemons__list');
 var btn = document.querySelector('.btn');
 
 
