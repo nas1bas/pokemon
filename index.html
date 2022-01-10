@@ -13,15 +13,37 @@
     <header class="header">
         <div class="container header__container">
             <a class="header__logo" href="index.html">
-                <img src="img/pokemon_logo 1.png" alt="logo" width="610" height="225">
+                <img src="img/logo.png" alt="logo" width="610" height="225">
             </a>
         </div>
     </header>
 
     <main class="main">
         <section class="selects">
-           <select class="select"></select>
-           <input type="search" placeholder="search">
+            <div class="container selects__container">
+                <form action="https://echo.htmlacademy.ru" method="post">
+
+                    <select class="select">
+                        <option selected disabled value="selected">Select</option>
+                    </select>
+
+                    <input class="input" type="search" placeholder="search">
+
+                    <select class="select">
+                        <option selected disabled value="selected">Select</option>
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
+                    </select>
+
+                    <button class="btn" type="submit">Go</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="pokemons">
+            <div class="container pokemons__container">
+                <ul class="list"></ul>
+            </div>
         </section>
     </main>
 
