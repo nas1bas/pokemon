@@ -1,0 +1,21 @@
+* {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+body {
+    background-color: #FFD845;
+}
+
+.header__logo {
+    margin-left: auto;
+    margin-right: auto;
+}
