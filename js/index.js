@@ -7,24 +7,86 @@ var a_z = document.querySelector('.select__az');
 
 var typesOfSelect = [];
 
-pokemons.forEach(pokemon => {
-    pokemon.type.forEach(item => {
-        if (!typesOfSelect.includes(item)) {
-            typesOfSelect.push(item);
-        }
-    })
-});
+// for (var i = 0; i < pokemons.length; i++) {
+//     for (var j = 0; j < pokemons[i].length; j++) {
+//         if (typesOfSelect.includes(pokemons[i][j])) {
+//             typesOfSelect.push(pokemons[i][j]);
+//         }
+//     }
+
+// }
+
+
+// for (var i = 0; i < typesOfSelect.length; i++) {
+
+//     var option = document.createElement('option');
+//     option.textContent = typesOfSelect[i][j];
+//     select.appendChild(option);
+// }
 
 for (var i = 0; i < pokemons.length; i++) {
     pokemonTypes(pokemons[i]);
 }
 
 
-typesOfSelect.forEach(item => {
+var typesOfSelect = [
+    {
+        "type": "Bug"
+    },
+    {
+        "type": "Dragon"
+    },
+    {
+        "type": "Electric"
+    },
+    {
+        "type": "Grass"
+    },
+    {
+        "type": "Ghost"
+    },
+
+    {
+        "type": "Ground"
+    },
+    
+    {
+        "type": "Ice"
+    },
+    {
+        "type": "Fire"
+    },
+    {
+        "type": "Fighting"
+    },
+    {
+        "type": "Flying"
+    },
+    {
+        "type": "Normal"
+    },
+    
+    {
+        "type": "Psychic"
+    },
+    {
+        "type": "Rock"
+    },
+    {
+        "type": "Water"
+    },
+    {
+        "type": "Grass"
+    },
+]
+
+for (var i = 0; i < typesOfSelect.length; i++) {
     var option = document.createElement('option');
-    option.textContent = item;
+
+    option.textContent = typesOfSelect[i].type;
+
     select.appendChild(option);
-})
+}
 //forms-selects-end
 
 
@@ -99,8 +161,8 @@ function sumSalaries(summ) {
         }
 
 
-        var firstWorker= salaries[i].summ;
-        var secondWorker= salaries[j].summ;
+        var firstWorker = salaries[i].summ;
+        var secondWorker = salaries[j].summ;
 
         var summ = firstWorker + secondWorker;
     }
