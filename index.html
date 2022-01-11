@@ -13,7 +13,7 @@
     <header class="header">
         <div class="container header__container">
             <a class="header__logo" href="index.html">
-                <img src="img/logo.png" alt="logo" width="610" height="225">
+                <img src="img/logo.png" alt="logo" width="550" height="200">
             </a>
         </div>
     </header>
@@ -21,18 +21,21 @@
     <main class="main">
         <section class="selects">
             <div class="container selects__container">
-                <form action="https://echo.htmlacademy.ru" method="post">
+                <form class="form">
 
                     <select class="select">
                         <option selected disabled value="selected">Select</option>
                     </select>
 
-                    <input class="input" type="search" placeholder="search">
+                    <div class="search">
+                        <input class="input" type="search" placeholder="search">
+                        <img class="input__img" src="img/search.svg" alt="search" width="24" height="24">
+                    </div>
 
-                    <select class="select">
-                        <option selected disabled value="selected">Select</option>
-                        <option value="a-z">A-Z</option>
-                        <option value="z-a">Z-A</option>
+                    <select class="select select__az">
+                        <option selected disabled value="selected">A-Z or Z-A</option>
+                        <option value="a-z">Aa-Zz</option>
+                        <option value="z-a">Zz-Aa</option>
                     </select>
 
                     <button class="btn" type="submit">Go</button>
