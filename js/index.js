@@ -7,83 +7,19 @@ var a_z = document.querySelector('.select__az');
 
 var typesOfSelect = [];
 
-// for (var i = 0; i < pokemons.length; i++) {
-//     for (var j = 0; j < pokemons[i].length; j++) {
-//         if (typesOfSelect.includes(pokemons[i][j])) {
-//             typesOfSelect.push(pokemons[i][j]);
-//         }
-//     }
-
-// }
-
-
-// for (var i = 0; i < typesOfSelect.length; i++) {
-
-//     var option = document.createElement('option');
-//     option.textContent = typesOfSelect[i][j];
-//     select.appendChild(option);
-// }
-
 for (var i = 0; i < pokemons.length; i++) {
-    pokemonTypes(pokemons[i]);
+    
+    for (var j = 0; j < pokemons[i].type.length; j++) {
+        if (!typesOfSelect.includes(pokemons[i].type[j])) {
+            typesOfSelect.push(pokemons[i].type[j]);
+        }
+    }
 }
-
-
-var typesOfSelect = [
-    {
-        "type": "Bug"
-    },
-    {
-        "type": "Dragon"
-    },
-    {
-        "type": "Electric"
-    },
-    {
-        "type": "Grass"
-    },
-    {
-        "type": "Ghost"
-    },
-
-    {
-        "type": "Ground"
-    },
-    
-    {
-        "type": "Ice"
-    },
-    {
-        "type": "Fire"
-    },
-    {
-        "type": "Fighting"
-    },
-    {
-        "type": "Flying"
-    },
-    {
-        "type": "Normal"
-    },
-    
-    {
-        "type": "Psychic"
-    },
-    {
-        "type": "Rock"
-    },
-    {
-        "type": "Water"
-    },
-    {
-        "type": "Grass"
-    },
-]
 
 for (var i = 0; i < typesOfSelect.length; i++) {
     var option = document.createElement('option');
 
-    option.textContent = typesOfSelect[i].type;
+    option.textContent = typesOfSelect[i];
 
     select.appendChild(option);
 }
@@ -106,6 +42,9 @@ function elementCreator(tagName) {
     return document.createElement(tagName);
 }
 
+for (var i = 0; i < pokemons.length; i++) {
+    pokemonTypes(pokemons[i]);
+} 
 
 function pokemonTypes(pokemon) {
 
